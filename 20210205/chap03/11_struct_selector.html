@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>struct selector</title>
+    <style>
+        ol>li:first-child>a {
+            color: red;
+        }
+
+        ol>li:last-child {
+            color: blue;
+        }
+
+        ul>li:nth-child(2n+1) {
+            color: red;
+        }
+
+        ul>li:nth-last-child(2n+1) {
+            color: blue;
+        }
+
+        h1:first-child {
+            background: black;
+            color: white;
+        }
+
+        h1:first-of-type {
+            background: black;
+            color: white;
+        }
+
+        h1:last-of-type {
+            background: gray;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>asd</h1>
+    <h2>12z3zfdg</h2>
+    <h2>356j3n5o</h2>
+    <div>
+        <p>asdqwafwrg</p>
+        <h1>awdawd</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quos modi cupiditate rerum, ratione distinctio
+            autem et quam enim veniam amet corrupti rem vel commodi impedit, sint cumque ex expedita!</p>
+        <h1>qweqwe</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maxime dolorum, impedit provident, alias fuga
+            nobis eaque dolorem quos nemo quas incidunt modi asperiores. Voluptates itaque inventore pariatur reiciendis
+            reprehenderit!</p>
+    </div>
+    <h2>356j3n5o123</h2>
+    <h2>356j3n5ozdfg</h2>
+    <ol>
+        <li><a href='#'>aa</a></li>
+        <li><a href='#'>bb</a></li>
+        <li><a href='#'>cc</a></li>
+        <li><a href='#'>dd</a></li>
+    </ol>
+    <ul>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+    </ul>
+</body>
+
+</html>

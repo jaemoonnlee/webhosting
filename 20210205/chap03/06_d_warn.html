@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child selector</title>
+    <style>
+        #header h1,
+        #header h2 {
+            color: red;
+        }
+
+        #header>h1 {
+            background: pink;
+        }
+
+        #section h1 {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="title">제목</h1>
+        <h2>H2</h2>
+    </div>
+    <div id="section">
+        <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium quas quidem
+            itaque debitis eum repudiandae facere, cupiditate vitae odio. Quidem sequi illo dolor? Ad dolores soluta
+            facere sint quasi!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestias repudiandae ipsum sint pariatur
+                est
+                nemo esse suscipit fugit mollitia aliquid ut quo necessitatibus distinctio unde, quas fugiat sapiente
+                similique!</p>
+    </div>
+</body>
+
+</html>
