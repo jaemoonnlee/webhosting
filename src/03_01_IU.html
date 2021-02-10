@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/f5c4734c00.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <!-- own references -->
+    <link rel="stylesheet" href="css/00_base_style.css">
+    <title>
+        IU
+    </title>
+</head>
+
+<body>
+    <!-- nav 따로 빼서 include 하는거... 까먹었다. js? jqeury? jsp던가? -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="01_home.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What i did
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="02_01_lotto_6_45.html">Lotto 6/45</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">-</a>
+                        <a class="dropdown-item" href="#">-</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- active 등 속성은 동적으로 해야하는데... 까먹었다 ㅎㅎ -->
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What i love
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="03_01_IU.html">IU</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">-</a>
+                        <a class="dropdown-item" href="#">-</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+    <!-- .................................................................................... -->
+    <div class="container">
+        <div class="row" style="margin: 5px;">
+            <div class="card-deck">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/01_mini01.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Lost And Fount</h5>
+                            <p class="card-text">미니 1집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/02_main01.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Growing Up</h5>
+                            <p class="card-text">정규 1집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/03_mini02.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">IU...IM</h5>
+                            <p class="card-text">미니 2집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/04_mini03.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Real</h5>
+                            <p class="card-text">미니 3집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/05_single01.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Real+</h5>
+                            <p class="card-text">싱글 1집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/06_main02.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Last Fantasy</h5>
+                            <p class="card-text">정규 2집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/07_single02.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">스무 살의 봄</h5>
+                            <p class="card-text">싱글 2집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/08_main03.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Times</h5>
+                            <p class="card-text">정규 3집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/09_main03re.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Times Epiloque</h5>
+                            <p class="card-text">정규 3집 리패키지</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/10_remake01.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">꽃갈피</h5>
+                            <p class="card-text">리메이크 1집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/11_mini04.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">CHAR-SHIRE</h5>
+                            <p class="card-text">미니 4집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/12_main04.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Palette</h5>
+                            <p class="card-text">정규 4집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/13_remake02.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">꽃갈피 둘</h5>
+                            <p class="card-text">리메이크 2집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../res/IU/Albums/14_mini05.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Love poem</h5>
+                            <p class="card-text">미니 5집</p>
+                            <a href="#" class="btn btn-primary">#</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-12">
+                <h1>Lorem ipsum dolor sit amet consectetur</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae soluta animi iste optio et? Dolore,
+                    quasi
+                    odio consequuntur quia deleniti vitae vero cupiditate, earum, voluptatem voluptatum harum
+                    consequatur qui
+                    voluptatibus.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -18,6 +18,20 @@
         .test2 {
             color: white;
         }
+
+        /* #graph_container {
+            height: 50px;
+        }
+
+        #graph_container:hover {
+            overflow: hidden;
+            width: auto;
+            height: auto;
+            -ms-transition-duration: 1s;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            transition-duration: 1s;
+        } */
     </style>
 </head>
 
@@ -48,11 +62,15 @@
     <br>
     <hr>
     <br>
-    <div>
-        <img src="01_02_05.png" width="500px">
-        <h3>733~946회 동안 뽑힌 숫자를 백분율로 시각화한 그래프</h3>
-        <p>위 그래프를 보면 각 번호가 차지하는 비율이 다르다. 이는 733~946회의 추첨이 3세대 기기를 통해 뽑혀진 숫자이며 이론적 확률 외의 기타 확률에 대한 기대값이라고 추측하여 반영하였다.</p>
-        <p>위 그래프를 '돌려돌려 돌림판' 혹은 '다트판'으로 생각하여 기준으로 삼고, 랜덤함수를 사용해 저 범위 중 하나를 선택하여 숫자를 추첨한다. 물론 중복시 재추첨한다.</p>
+    <div id="graph_container">
+        <div id="graph">
+            <img src="01_02_05.png" width="500px">
+            <h3>733~946회 동안 뽑힌 숫자를 백분율로 시각화한 그래프</h3>
+            <p>위 그래프를 보면 각 번호가 차지하는 비율이 다르다. 이는 733~946회의 추첨이 3세대 기기를 통해 뽑혀진 숫자이며 이론적 확률 외의 기타 확률에 대한 기대값이라고 추측하여 반영하였다.
+            </p>
+            <p>위 그래프를 '돌려돌려 돌림판' 혹은 '다트판'으로 생각하여 기준으로 삼고, 랜덤함수를 사용해 저 범위 중 하나를 선택하여 숫자를 추첨한다. 물론 중복시 재추첨한다.</p>
+
+        </div>
     </div>
     <br>
     <hr>

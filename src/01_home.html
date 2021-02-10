@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/f5c4734c00.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <!-- own references -->
+    <link rel="stylesheet" href="css/00_base_style.css">
+    <title>
+        Home
+    </title>
+</head>
+
+<body>
+    <!-- nav 따로 빼서 include 하는거... 까먹었다. js? jqeury? jsp던가? -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <!-- active 등 속성은 동적으로 해야하는데... 까먹었다 ㅎㅎ -->
+                    <a class="nav-link active" href="01_home.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What i did
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="02_01_lotto_6_45.html">Lotto 6/45</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">-</a>
+                        <a class="dropdown-item" href="#">-</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What i love
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="03_01_IU.html">IU</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">-</a>
+                        <a class="dropdown-item" href="#">-</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+    </nav>
+
+    <!-- .................................................................................... -->
+    <div class="container">
+        <!-- TODO write here -->
+        <div class="row" style="margin: 20px;">
+            <div class="col-6">
+                <h1 class="text-info">Home</h1>
+                <p>이 페이지는 HTML5 및 css, js 등을 공부하며 배운 내용을 보여 주기 위해 만든 페이지입니다.</p>
+                <p>HTML5, Bootstrap v4.2 기준으로 작성되었습니다.</p>
+                <p>...</p>
+            </div>
+            <div class="col-6">
+                <h1 class="text-primary">About Me</h1>
+                <table class="table table-hover table-sm">
+                    <caption>&lt;Table&gt; HTML5 & Bootstrap</caption>
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">한글</th>
+                            <th scope="col">English</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">이름</th>
+                            <td>이재문</td>
+                            <td colspan="2">Jaemoon Lee</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">성별</th>
+                            <td>남자</td>
+                            <td colspan="2">male</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">?</th>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="table-active">
+                            <th scope="row">class</th>
+                            <td></td>
+                            <td colspan="2">active</td>
+                        </tr><tr class="table-primary">
+                            <th scope="row">class</th>
+                            <td></td>
+                            <td colspan="2">primary</td>
+                        </tr><tr class="table-success">
+                            <th scope="row">class</th>
+                            <td></td>
+                            <td colspan="2">success</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <th scope="row">class</th>
+                            <td></td>
+                            <td colspan="2">danger</td>
+                        </tr>
+                        <tr class="table-dark">
+                            <th scope="row">class</th>
+                            <td></td>
+                            <td colspan="2">dark</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-8">
+                <h2>col-8</h1>
+                    <p>h2</p>
+                    <p>이 페이지는 HTML5 및 css, js 등을 공부하며 배운 내용을 보여 주기 위해 만든 페이지입니다.</p>
+            </div>
+            <div class="col-4">
+                <h3>col-4</h1>
+                    <p>h3</p>
+                    <p>이 페이지는 HTML5 및 css, js 등을 공부하며 배운 내용을 보여 주기 위해 만든 페이지입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
