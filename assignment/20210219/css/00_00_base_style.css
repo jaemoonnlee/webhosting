@@ -1,0 +1,52 @@
+/* CSS */
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    /* font set? */
+}
+
+/* responsible web */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .container {
+        width: 768px;
+        height: 864px;
+        border: 1px dotted red;
+        display: grid;
+        grid-template-rows: 80px 1fr 40px;
+        grid-template-areas:
+            'nav'
+            'main'
+            'footer';
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 480px;
+        height: 540px;
+        border: 1px dotted red;
+        display: grid;
+        grid-template-rows: 80px 1fr 40px;
+        grid-template-areas:
+            'nav'
+            'main'
+            'footer';
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .container {
+        width: 960px;
+        height: 1080px;
+        border: 1px dotted red;
+        display: grid;
+        grid-template-rows: 80px 1fr 40px;
+        grid-template-areas:
+            'nav'
+            'main'
+            'footer';
+    }
+}

@@ -7,7 +7,7 @@
     src: url(BMJUA_otf.otf), url(BMJUA_ttf.ttf);
 }
 
-/* test */
+/* responsible web */
 @media screen and (min-width: 768px) and (max-width: 959px) {
     html {
         background-color: black;

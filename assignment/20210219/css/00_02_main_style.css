@@ -1,0 +1,77 @@
+/* responsible web */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .main {
+        grid-area: main;
+        position: relative;
+        width: 768px;
+        box-sizing: border-box;
+        border: 1px dotted green;
+        overflow: scroll;
+    }
+
+    .main>.main_col {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    [class*=-card] {
+        width: 220px;
+        height: 110px;
+        border: 1px solid red;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        grid-area: main;
+        position: relative;
+        width: 480px;
+        box-sizing: border-box;
+        border: 1px dotted green;
+        overflow: scroll;
+    }
+
+    .main>.main_col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    [class*=-card] {
+        width: 220px;
+        height: 110px;
+
+        border: 1px solid red;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .main {
+        grid-area: main;
+        position: relative;
+        width: 960px;
+        box-sizing: border-box;
+        border: 1px dotted green;
+        overflow: scroll;
+    }
+
+    .main>.main_col {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    [class*=-card] {
+        width: 220px;
+        height: 110px;
+
+        border: 1px solid red;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
