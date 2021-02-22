@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/MyStyle.css">
-
+    <link rel="stylesheet" href="../../../res/highlight/styles/hybrid.css">
+    <script src="../../../res/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style>
         /* * { font-family: '테스트'; } */
     </style>
@@ -21,11 +23,9 @@
         </div>
         <nav id="main_gnb">
             <ul>
-                <li><a href="#">Web</a></li>
-                <li><a href="#">Mobile</a></li>
-                <li><a href="#">Game</a></li>
-                <li><a href="#">Simulation</a></li>
-                <li><a href="#">Data</a></li>
+                <li><a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">leetcode</a></li>
+                <li><a href="https://www.acmicpc.net/" target="_blank" rel="noopener noreferrer">BAEKJOON</a></li>
+                <li><a href="https://programmers.co.kr/" target="_blank" rel="noopener noreferrer">programmers</a></li>
             </ul>
         </nav>
         <nav id="main_lnb">
@@ -51,10 +51,25 @@
                     consequatur accusamus.</p>
             </article>
             <article class="main_article">
-                <h1>Main Article</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic illum ipsum nulla qui sint voluptatibus
-                    ratione sapiente non perferendis, quidem aliquid est, officia adipisci eum eveniet enim impedit
-                    consequatur accusamus.</p>
+                <pre class="java">
+                    <code>
+/**
+    * @author John Smith <john.smith@example.com>
+    */
+package l2f.gameserver.model;
+public abstract strictfp class L2Char extends L2Object {
+    public static final Short ERROR = 0x0001;
+
+    public void moveTo(int x, int y, int z) {
+        _ai = null;
+        log("Should not be called");
+        if (1 > 5) { // wtf!?
+            return;
+        }
+    }
+}
+                    </code>
+                </pre>
             </article>
         </section>
         <aside id="main_aside">
