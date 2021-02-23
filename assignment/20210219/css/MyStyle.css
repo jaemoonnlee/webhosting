@@ -44,7 +44,7 @@
 
     .description>strong {
         display: block;
-        width: 120px;
+        width: 130px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -182,7 +182,7 @@
     }
 }
 
-@media screen and (min-width: 960px)and (max-width: 1920px) {
+@media screen and (min-width: 960px)and (max-width: 1919px) {
 
     /* 큰 사이즈 */
     #main_header {
@@ -224,7 +224,7 @@
 
     .description>strong {
         display: block;
-        width: 120px;
+        width: 170px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -276,7 +276,7 @@
 
     /* 매우 큰 사이즈 */
     #main_header {
-        width: 1920px;
+        width: 1440px;
         margin: 0 auto;
         height: 160px;
         position: relative;
@@ -284,25 +284,25 @@
 
     /* contents */
     #content {
-        width: 1920px;
+        width: 1440px;
         margin: 0 auto;
         overflow: hidden;
     }
 
     #content>#main_section {
-        width: 1530px;
+        width: 1150px;
         float: left;
     }
 
     #content>#main_aside {
-        width: 380px;
+        width: 280px;
         float: right;
     }
 
     section.buttons>label {
         display: block;
         float: left;
-        width: 190px;
+        width: 140px;
         height: 30px;
         line-height: 30px;
         text-align: center;
@@ -314,7 +314,7 @@
 
     .description>strong {
         display: block;
-        width: 120px;
+        width: 250px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -322,7 +322,7 @@
 
     /* footer */
     #main_footer {
-        width: 1920px;
+        width: 1440px;
         margin: 0 auto;
         margin-bottom: 10px;
         box-sizing: border-box;
@@ -366,7 +366,8 @@
 * {
     margin: 0 auto;
     padding: 0;
-    font-family: 'Reggae One', cursive;
+    /* font-family: 'Reggae One', cursive; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -375,6 +376,24 @@ body {
 
 li {
     list-style: none;
+}
+
+.boxsizingBorder {
+    width: 100%;
+    /* overflow: visible; */
+}
+
+#useDeco {
+    padding-left: 15px;
+}
+
+#useDeco>li {
+    list-style: circle;
+    /* padding-left: 5px; */
+}
+
+.shadow {
+    background-color: #00000036;
 }
 
 a {
@@ -498,4 +517,20 @@ input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
 .description {
     float: left;
     margin-left: 10px;
+}
+
+/* 문제&소스코드 토글 */
+.main_article>input[type=checkbox]:checked+div {
+    height: 100%;
+}
+
+.main_article>input[type=checkbox]+div {
+    overflow: hidden;
+    width: 650px;
+    height: 0px;
+    /* 왜 적용이 안될까? */
+    -ms-transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
 }

@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- css -->
     <link rel="stylesheet" href="../css/MyStyle.css">
+    <!-- code highlight -->
     <link rel="stylesheet" href="../../../res/highlight/styles/hybrid.css">
     <script src="../../../res/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        /* * { font-family: '테스트'; } */
-    </style>
+    <!-- jquery& js -->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/MyScript.js"></script>
 </head>
 
 <body>
@@ -36,80 +38,70 @@
             </ul>
         </nav>
     </header>
+    <!-- <div style="position: fixed; right: 100px; top: 50px;">
+        <button onclick="repositionFixed()">Button</button>
+    </div> -->
     <div id="content">
         <section id="main_section">
             <article class="main_article">
-                <h1>Main Article</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic illum ipsum nulla qui sint voluptatibus
-                    ratione sapiente non perferendis, quidem aliquid est, officia adipisci eum eveniet enim impedit
-                    consequatur accusamus.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic illum ipsum nulla qui sint voluptatibus
-                    ratione sapiente non perferendis, quidem aliquid est, officia adipisci eum eveniet enim impedit
-                    consequatur accusamus.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic illum ipsum nulla qui sint voluptatibus
-                    ratione sapiente non perferendis, quidem aliquid est, officia adipisci eum eveniet enim impedit
-                    consequatur accusamus.</p>
+                <input id="qq" type="checkbox" name="tab" checked>
+                <label for="qq">
+                    <h1>문제</h1>
+                </label>
+                <br>
+                <div id="question">
+                    <!-- jsp:inclue 같은걸로 채우기 -->
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+                    <p>lorem</p>
+
+                </div>
             </article>
             <article class="main_article">
-                <pre class="java">
-                    <code>
-/**
-    * @author John Smith <john.smith@example.com>
-    */
-package l2f.gameserver.model;
-public abstract strictfp class L2Char extends L2Object {
-    public static final Short ERROR = 0x0001;
-
-    public void moveTo(int x, int y, int z) {
-        _ai = null;
-        log("Should not be called");
-        if (1 > 5) { // wtf!?
-            return;
-        }
-    }
-}
-                    </code>
-                </pre>
+                <input id="ss" type="checkbox" name="tab">
+                <label for="ss">
+                    <h1>소스코드</h1>
+                </label>
+                <br>
+                <div id="solve">
+                    <!-- jsp:inclue 같은걸로 채우기 -->
+                </div>
             </article>
         </section>
         <aside id="main_aside">
             <input id="first" type="radio" name="tab" checked>
             <input id="second" type="radio" name="tab">
             <section class="buttons">
-                <label for="first">First</label>
-                <label for="second">Second</label>
+                <label for="first">-</label>
+                <label for="second">Kakao</label>
             </section>
             <div class="tab_item">
                 <ul>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="#" onclick="showQ(1)">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>HTML5 Canvas</strong>
+                            <div class="description"><strong>문제 1 – 아이디 추천</strong>
                                 <p>2021-02-18</p>
                             </div>
                         </a></li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
+
                             </div>
-                            <div class="description"><strong>HTML5 Canvas</strong>
+                            <div class="description"><strong>문제 2 – 메뉴 리뉴얼</strong>
                                 <p>2021-02-18</p>
                             </div>
                         </a></li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>HTML5 Canvas</strong>
-                                <p>2021-02-18</p>
-                            </div>
-                        </a></li>
-                    <li class="item"><a href="#">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
-                            </div>
-                            <div class="description"><strong>HTML5 Canvas</strong>
+                            <div class="description"><strong>문제 3 – 순위 검색</strong>
                                 <p>2021-02-18</p>
                             </div>
                         </a></li>
@@ -117,37 +109,72 @@ public abstract strictfp class L2Char extends L2Object {
             </div>
             <div class="tab_item">
                 <ul>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="https://programmers.co.kr/competitions/317/2021-kakao-blind-recruitment"
+                            target="_blank" rel="noopener noreferrer">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>CSS3 Border</strong>
-                                <p>2021-02-18</p>
+                            <div class="description">
+                                <p>접수</p>
+                                <strong>20년 08월 24일 11:00 ~ 09월 07일 19:00</strong>
+                                <p>테스트</p>
+                                <strong>20년 09월 12일 14:00 ~ 09월 26일 19:00</strong>
                             </div>
                         </a></li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72410" target="_blank"
+                            rel="noopener noreferrer">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
-
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>CSS3 Border</strong>
-                                <p>2021-02-18</p>
+                            <div class="description"><strong>문제 1 – 아이디 추천</strong>
                             </div>
                         </a></li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72411" target="_blank"
+                            rel="noopener noreferrer">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>CSS3 Border</strong>
-                                <p>2021-02-18</p>
+                            <div class="description"><strong>문제 2 – 메뉴 리뉴얼</strong>
                             </div>
                         </a></li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72412" target="_blank"
+                            rel="noopener noreferrer">
                             <div class="thumbnail">
-                                <img src="http://placehold.it/45x45" alt="">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
                             </div>
-                            <div class="description"><strong>CSS3 Border</strong>
-                                <p>2021-02-18</p>
+                            <div class="description"><strong>문제 3 – 순위 검색</strong>
+                            </div>
+                        </a></li>
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72413" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="thumbnail">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
+                            </div>
+                            <div class="description"><strong>문제 4 – 합승 택시 요금</strong>
+                            </div>
+                        </a></li>
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72414" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="thumbnail">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
+                            </div>
+                            <div class="description"><strong>문제 5 – 광고 삽입</strong>
+                            </div>
+                        </a></li>
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72415" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="thumbnail">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
+                            </div>
+                            <div class="description"><strong>문제 6 – 카드 짝 맞추기</strong>
+                            </div>
+                        </a></li>
+                    <li class="item"><a href="https://programmers.co.kr/learn/courses/30/lessons/72416" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="thumbnail">
+                                <!-- <img src="http://placehold.it/45x45" alt=""> -->
+                            </div>
+                            <div class="description"><strong>문제 7 – 매출 하락 최소화</strong>
                             </div>
                         </a></li>
                 </ul>
@@ -155,8 +182,8 @@ public abstract strictfp class L2Char extends L2Object {
         </aside>
     </div>
     <footer id="main_footer">
-        <h3>HTML5 + CSS3 Basic</h3>
-        <address>Website Layout Basic</address>
+        <h3>Contact</h3>
+        <address>jaemoon.n.lee@gmail.com</address>
     </footer>
 </body>
 
