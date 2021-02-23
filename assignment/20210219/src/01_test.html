@@ -59,32 +59,10 @@
                     <h1>소스코드</h1>
                 </label>
                 <br>
-                <div id="solve">
-                    <!-- blank -->
+                <div>
                     <pre class="java">
-                        <code>
-    class Solution {
-        public String solution(String new_id) {
-            String answer = "";
-
-            new_id = new_id.toLowerCase()
-                .replaceAll("[^\\w-\\.]", "")
-                .replaceAll("[\\.]{2,}", ".")
-                .replaceAll("^\\.|\\.$","");
-
-            if (new_id.length() == 0)
-                new_id = "a";
-
-            if (new_id.length() > 15)
-                new_id = new_id.substring(0, 15).replaceAll("\\.$", "");
-
-            while (new_id.length() < 3) {
-                new_id += new_id.substring(new_id.length() - 1, new_id.length());
-            }
-            answer = new_id;
-            return answer;
-        }
-    }
+                        <code id="solve">
+                            <!-- blank -->
                         </code>
                     </pre>
                 </div>
@@ -199,10 +177,6 @@
         function show01() {
             $("#question").load("kakao2021_01_01_q.html");
             $("#solve").load("kakao2021_01_01.html");
-
-            $(document).ready(function(){
-                hljs.initHighlightingOnLoad();
-            });
         }
         function show03() {
             $("#question").load("kakao2021_01_03_q.html");

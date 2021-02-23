@@ -1,61 +1,57 @@
-<pre class="java">
-    <code>
-    class Solution {
-        public int[] solution(String[] info, String[] query) {
-            Map<String, List<Integer>> infos = new HashMap<>();
-            // info Map으로 정리
-            for (String in : info) {
-                String[] split = in.split(" ");
-                int score = Integer.parseInt(split[4]);
-    
-                for (int i = 0; i < (1 << 4); i++) {
-                    StringBuilder key = new StringBuilder();
-                    // query의 '-'에 해당하는 부분집합(?) 만들기 위함
-                    for (int j = 0; j < 4; j++) {
-                        if ((i & (1 << j)) > 0)
-                            key.append(split[j]);
-                    }
-                    // System.out.println(key.toString());
-                    infos.computeIfAbsent(key.toString(), s -> new ArrayList<>()).add(score);
+class Solution {
+    public int[] solution(String[] info, String[] query) {
+        Map<String, List<Integer>> infos = new HashMap<>();
+        // info Map으로 정리
+        for (String in : info) {
+            String[] split = in.split(" ");
+            int score = Integer.parseInt(split[4]);
+
+            for (int i = 0; i < (1 << 4); i++) {
+                StringBuilder key = new StringBuilder();
+                // query의 '-'에 해당하는 부분집합(?) 만들기 위함
+                for (int j = 0; j < 4; j++) {
+                    if ((i & (1 << j)) > 0)
+                        key.append(split[j]);
                 }
+                // System.out.println(key.toString());
+                infos.computeIfAbsent(key.toString(), s -> new ArrayList<>()).add(score);
             }
-    
-            // 정렬
-            for (Map.Entry<String, List<Integer>> entry : infos.entrySet())
-                entry.getValue().sort(null);
-    
-            int[] answer = new int[query.length];
-            List<Integer> empty = new ArrayList<>();
-            // query는 순서가 필요하므로 Map이 아닌 List 사용
-            for (int i = 0; i < query.length; i++) {
-                // '-'를 공백(' ')으로, 그리고 스플릿 구분자를 ' and ', 혹은 ' '로 적용
-                String[] split = query[i].replaceAll("-", "").split(" and | ");
-                // StringBuilder와 String.join()의 차이는 뭘까?
-                String key = String.join("", split[0], split[1], split[2], split[3]);
-                int score = Integer.parseInt(split[4]);
-    
-                List<Integer> list = infos.getOrDefault(key, empty);
-    
-                // start point = s, end point = e
-                int s = 0, e = list.size();
-                while (s < e) {
-                    // binary search를 위한 임시값
-                    // 초기값은 (0 + 리스트 길이)/2 로 중간값.
-                    int mid = (s + e) / 2;
-                    // mid번째 인덱스 값과 현재 검색해야할 score를 비교 후
-                    if (list.get(mid) < score)
-                        // 작다면, 시작점을 변경
-                        s = mid + 1;
-                    else
-                        // 크다면 종료점을 새로 설정 후 반복문 재실행
-                        e = mid;
-                }
-                // 오름차순 정렬이기 때문에, 시작점에 해당하는 값을 빼면 score 이상 값을 포함한 개수를 반환한다.
-                answer[i] = list.size() - s;
-            }
-    
-            return answer;
         }
+
+        // 정렬
+        for (Map.Entry<String, List<Integer>> entry : infos.entrySet())
+            entry.getValue().sort(null);
+
+        int[] answer = new int[query.length];
+        List<Integer> empty = new ArrayList<>();
+        // query는 순서가 필요하므로 Map이 아닌 List 사용
+        for (int i = 0; i < query.length; i++) {
+            // '-'를 공백(' ')으로, 그리고 스플릿 구분자를 ' and ', 혹은 ' '로 적용
+            String[] split = query[i].replaceAll("-", "").split(" and | ");
+            // StringBuilder와 String.join()의 차이는 뭘까?
+            String key = String.join("", split[0], split[1], split[2], split[3]);
+            int score = Integer.parseInt(split[4]);
+
+            List<Integer> list = infos.getOrDefault(key, empty);
+
+            // start point = s, end point = e
+            int s = 0, e = list.size();
+            while (s < e) {
+                // binary search를 위한 임시값
+                // 초기값은 (0 + 리스트 길이)/2 로 중간값.
+                int mid = (s + e) / 2;
+                // mid번째 인덱스 값과 현재 검색해야할 score를 비교 후
+                if (list.get(mid) < score)
+                    // 작다면, 시작점을 변경
+                    s = mid + 1;
+                else
+                    // 크다면 종료점을 새로 설정 후 반복문 재실행
+                    e = mid;
+            }
+            // 오름차순 정렬이기 때문에, 시작점에 해당하는 값을 빼면 score 이상 값을 포함한 개수를 반환한다.
+            answer[i] = list.size() - s;
+        }
+
+        return answer;
     }
-    </code>
-</pre>
+}
