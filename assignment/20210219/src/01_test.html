@@ -52,7 +52,7 @@
                     <h1>문제</h1>
                 </label>
                 <br>
-                <div id="question">
+                <div id="question" class="loadDiv">
                     <p>Pick a thing in Solved tab.</p>
                 </div>
             </article>
@@ -62,7 +62,7 @@
                     <h1>소스코드</h1>
                 </label>
                 <br>
-                <div>
+                <div class="loadDiv">
                     <pre class="java"id="solve">
                             <!-- <code>
     class Solution {
@@ -201,21 +201,25 @@
         function show01() {
             $("#question").load("kakao2021_01_01_q.html");
             $("#solve").load("kakao2021_01_01.html");
-            hljs.initHighlightingOnLoad();
+            $(".loadDiv").onload() = function () {
+                hljs.initHighlightingOnLoad();
+            }
         }
         function show03() {
             $("#question").load("kakao2021_01_03_q.html");
             $("#solve").load("kakao2021_01_03.html");
-            hljs.initHighlightingOnLoad();
+            $(".loadDiv").onload() = function () {
+                hljs.initHighlightingOnLoad();
+            }
         }
-        // window.onload() = function(){
-        //     hljs.initHighlightingOnLoad();
-        // }
+            // window.onload() = function(){
+            //     hljs.initHighlightingOnLoad();
+            // }
 
-        // TODO lnb
-        // TODO code highlight 적용 여부?
-        // TODO 배경
-        // TODO 통합(?) enter page 제작 <- clear
+            // TODO lnb
+            // TODO code highlight 적용 여부?
+            // TODO 배경
+            // TODO 통합(?) enter page 제작 <- clear
     </script>
 </body>
 
