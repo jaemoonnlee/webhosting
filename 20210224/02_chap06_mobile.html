@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main_header {
+            height: 45px;
+            background: url(header_background.png);
+            /* 자손 위치 지정 */
+            position: relative;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        #main_header>h1 {
+            color: white;
+        }
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+            background: url('css_sprites.png') -1px -1px;
+            text-indent: -999999999px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+            background: url('css_sprites.png') -65px -1px;
+            text-indent: -999999999px;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        #toggle+#wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: #363636;
+            padding: 15px;
+        }
+
+        #toggle_gnb {
+            background: #ffffff;
+            padding: 5px;
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
+            float: left;
+        }
+
+        /* top navigation */
+        #top_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #b42111;
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+
+        /* bottom navigation */
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        #bottom_gnb>div {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb>div>a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #bottom_gnb>div>a::before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+
+        #section_header {
+            padding: 20px;
+        }
+
+        #section_article {
+            padding: 10px;
+        }
+
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a href="#" class="left">Main</a>
+            <h1>Mobile</h1>
+            <label for="toggle" class="right">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼1</a></div>
+            <div><a href="#">버튼2</a></div>
+            <div><a href="#">버튼3</a></div>
+            <div><a href="#">버튼4</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼a</a></div>
+            <div><a href="#">버튼b</a></div>
+            <div><a href="#">버튼c</a></div>
+            <div><a href="#">버튼d</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <time>Birth: 1989-05-20</time>
+            </header>
+            <article id="section_article">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dolore commodi, veritatis quasi
+                    mollitia repellendus, odio harum repellat illum optio porro a soluta aliquid suscipit hic sit. Omnis
+                    dolorem perspiciatis culpa quos saepe deleniti. Quos consectetur consequuntur velit amet placeat.
+                    Iusto magnam doloremque eius nam modi sint, aspernatur itaque eos.</p>
+            </article>
+        </section>
+        <footer id="main_footer">
+            <h3>HTML5 + CSS3 Basic</h3>
+            <address>Website Layout Basic</address>
+        </footer>
+    </div>
+</body>
+
+</html>
