@@ -10,10 +10,10 @@ class Solution {
         if (new_id.length() == 0)
             new_id = "a";
 
-        if (new_id.length() > 15)
+        if (new_id.length() &gt; 15)
             new_id = new_id.substring(0, 15).replaceAll("\\.$", "");
 
-        while (new_id.length() < 3) {
+        while (new_id.length() &lt; 3) {
             new_id += new_id.substring(new_id.length() - 1, new_id.length());
         }
         answer = new_id;
