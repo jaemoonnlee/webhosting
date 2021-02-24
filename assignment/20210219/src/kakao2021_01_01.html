@@ -1,22 +1,24 @@
-class Solution {
-    public String solution(String new_id) {
-        String answer = "";
-
-        new_id = new_id.toLowerCase()
-            .replaceAll("[^\\w-\\.]", "")
-            .replaceAll("[\\.]{2,}", ".")
-            .replaceAll("^\\.|\\.$","");
-
-        if (new_id.length() == 0)
-            new_id = "a";
-
-        if (new_id.length() &gt; 15)
-            new_id = new_id.substring(0, 15).replaceAll("\\.$", "");
-
-        while (new_id.length() &lt; 3) {
-            new_id += new_id.substring(new_id.length() - 1, new_id.length());
+<code>
+    class Solution {
+        public String solution(String new_id) {
+            String answer = "";
+    
+            new_id = new_id.toLowerCase()
+                .replaceAll("[^\\w-\\.]", "")
+                .replaceAll("[\\.]{2,}", ".")
+                .replaceAll("^\\.|\\.$","");
+    
+            if (new_id.length() == 0)
+                new_id = "a";
+    
+            if (new_id.length() &gt; 15)
+                new_id = new_id.substring(0, 15).replaceAll("\\.$", "");
+    
+            while (new_id.length() &lt; 3) {
+                new_id += new_id.substring(new_id.length() - 1, new_id.length());
+            }
+            answer = new_id;
+            return answer;
         }
-        answer = new_id;
-        return answer;
     }
-}
+</code>
